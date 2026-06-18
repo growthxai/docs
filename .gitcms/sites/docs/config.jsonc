@@ -1,0 +1,106 @@
+{
+  "version": "1.2",
+  "media": {
+    "default_library": "repo_media",
+    "libraries": [
+      {
+        "key": "repo_media",
+        "label": "Repository media",
+        "references": {
+          "write": {
+            "mode": "root_relative",
+            "base_path": "/"
+          },
+          "allow_default_library_fallback": true
+        },
+        "limits": {
+          "max_file_size_mb": 10
+        },
+        "driver": "git",
+        "storage": {
+          "root_path": "public"
+        }
+      }
+    ]
+  },
+  "ssg_framework": "nextjs",
+  "frontmatter_format": "yaml",
+  "sitemap_url": "https://growthx.ai/sitemap.xml",
+  "publishing_mode": "direct_publish",
+  "collections": [
+    {
+      "name": "essentials",
+      "git_path": "/essentials/",
+      "file_extension": ".mdx",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "title",
+          "type": "title",
+          "label": "Title"
+        },
+        {
+          "name": "description",
+          "type": "richtext",
+          "label": "Description"
+        },
+        {
+          "name": "icon",
+          "type": "image",
+          "label": "Icon"
+        }
+      ]
+    },
+    {
+      "name": "endpoint",
+      "git_path": "/api-reference/endpoint/",
+      "file_extension": ".mdx",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "title",
+          "type": "title",
+          "label": "Title"
+        },
+        {
+          "name": "openapi",
+          "type": "text",
+          "label": "Openapi"
+        }
+      ]
+    },
+    {
+      "name": "ai-tools",
+      "git_path": "/ai-tools/",
+      "file_extension": ".mdx",
+      "filename_pattern": "",
+      "collection_type": "flat",
+      "frontmatter_schema": [
+        {
+          "name": "title",
+          "type": "title",
+          "label": "Title"
+        },
+        {
+          "name": "description",
+          "type": "richtext",
+          "label": "Description"
+        },
+        {
+          "name": "icon",
+          "type": "image",
+          "label": "Icon"
+        }
+      ]
+    },
+    {
+      "name": "snippets",
+      "git_path": "/snippets/",
+      "file_extension": ".mdx",
+      "filename_pattern": "",
+      "collection_type": "flat"
+    }
+  ]
+}
